@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sate Ponijo Kedungjambal</title>
+    <link rel="stylesheet" href="assets/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+
+  <body onload="startTime()">
+    <!--Navbar-->
+    <header id="header-sticky">
+      <div id="logo">
+        <p id="header-logo">
+          <a href="#welcome-section">Sate Ponijo<br />Kedungjambal</a>
+        </p>
+      </div>
+      <nav id="navbar">
+        <ul class="nav-list">
+          <li><a href="#about-title">Tentang Kami</a></li>
+          <li><a href="#location-title">Lokasi</a></li>
+          <li><a href="#menu-title">Menu</a></li>
+          <li><a href="#contact-title">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!--Welcome Section-->
+    <main>
+      <div id="welcome-section">
+        <h1 id="welcome-title">Selamat Datang</h1>
+        <div id="welcome-bottom">
+          <div id="welcome-open">
+            <p class="open-dot open-block">&#8226;</p>
+            <p class="open-dot-text open-block">Masih Buka</p>
+          </div>
+          <div id="welcome-down">
+            <p>Lihat Lebih</p>
+            <a href="#about-section"><p class="welcome-arrow"></p></a>
+          </div>
+          <div id="welcome-time">
+            <div id="txt"></div>
+
+            <script>
+              function startTime() {
+                const today = new Date();
+                let h = today.getHours();
+                let m = today.getMinutes();
+                let s = today.getSeconds();
+                m = checkTime(m);
+                s = checkTime(s);
+                document.getElementById("txt").innerHTML = h + ":" + m + ":" + s;
+                setTimeout(startTime, 1000);
+              }
+
+              function checkTime(i) {
+                if (i < 10) {
+                  i = "0" + i;
+                } // add zero in front of numbers < 10
+                return i;
+              }
+            </script>
+          </div>
+        </div>
+      </div>
+
+      <!--About Section-->
+      <div id="about-section">
+        <h2 id="about-title">Tentang Kami</h2>
+        <p id="about-text">Rumah makan sate kambing ponijo kedung jambal menyediakan menu makanan sate kambing, tongseng, tengkleng, gule, gule masak, gule goreng sambal bawang. Menerima pesanan masak Aqiqah dan Hajatan.</p>
+      </div>
+
+      <!--Location Section-->
+      <div id="location-section">
+        <h1 id="location-title">Lokasi</h1>
+        <div id="location-box">
+          <h3 class="location-sub-title">Alamat</h3>
+          <p class="location-text-2">Jl. Raya Pantura, Dua, Kedungjambal, Kec. Tawangsari, Kabupaten Sukoharjo, Jawa Tengah 57561</p>
+          <h3 class="location-sub-title">Jam buka</h3>
+          <div>
+            <ul class="location-text">
+              <li>Senin, 08:00 - 17:00</li>
+              <li>Selasa, 08:00 - 17:00</li>
+              <li>Rabu, 08:00 - 17:00</li>
+              <li>Kamis, 08:00 - 17:00</li>
+              <li>Jumat, 08:00 - 17:00</li>
+              <li>Sabtu, 08:00 - 17:00</li>
+              <li>Minggu, 08:00 - 17:00</li>
+            </ul>
+          </div>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d63256.57554561904!2d110.72465128666168!3d-7.732829420971214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m5!1s0x2e7a39062cd9b9b7%3A0xaffc4fb04b5249a9!2sSate%20Kambing%20Ponijo%2C%20Jl.%20Raya%20Pantura%2C%20Dua%2C%20Kedungjambal%2C%20Kec.%20Tawangsari%2C%20Kabupaten%20Sukoharjo%2C%20Jawa%20Tengah%2057561!3m2!1d-7.7329225!2d110.7596884!4m0!5e0!3m2!1sen!2sid!4v1660829010029!5m2!1sen!2sid"
+            id="location-map"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+
+      <!--Menu Section-->
+      <div id="menu-section">
+        <h2 id="menu-title">Menu</h2>
+        <h2 id="menu-food">Makanan</h2>
+        <div id="menu-grid">
+          <div id="menu-box">
+            <img class="menu-image" src="https://monitorindonesia.com/wp-content/uploads/2022/06/sate-kambing.jpeg" alt="menu" />
+            <p id="menu-name">Sate Kambing</p>
+            <p id="menu-price">Rp.20.000</p>
+          </div>
+          <div id="menu-box">
+            <img class="menu-image" src="https://upload.wikimedia.org/wikipedia/commons/3/38/Tongseng.jpg" alt="menu" />
+            <p id="menu-name">Tongseng</p>
+            <p id="menu-price">Rp.20.000</p>
+          </div>
+
+          <div id="menu-box">
+            <img class="menu-image" src="https://asset.kompas.com/crops/nms2OcuQgdVeLtm8kscQ0R8Pdd4=/131x0:716x390/375x240/data/photo/2016/07/02/10302132016-0630-16114800780x390.jpg" alt="menu" />
+            <p id="menu-name">Tengkleng</p>
+            <p id="menu-price">Rp.15.000</p>
+          </div>
+          <div id="menu-box">
+            <img class="menu-image" src="https://assets.pikiran-rakyat.com/crop/0x0:0x0/x/photo/2022/07/10/3201898653.jpg" alt="menu" />
+            <p id="menu-name">Gulai Biasa</p>
+            <p id="menu-price">Rp.10.000</p>
+          </div>
+
+          <div id="menu-box">
+            <img class="menu-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/800px-Black_colour.jpg" alt="menu" />
+            <p id="menu-name">Gulai Masak</p>
+            <p id="menu-price">Rp.10.000</p>
+          </div>
+          <div id="menu-box">
+            <img class="menu-image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/50/Black_colour.jpg/800px-Black_colour.jpg" alt="menu" />
+            <p id="menu-name">Gulai Goreng</p>
+            <p id="menu-price">Rp.10.000</p>
+          </div>
+        </div>
+
+        <h2 id="menu-drink">Minuman</h2>
+        <div id="menu-grid">
+          <div id="menu-box">
+            <img class="menu-image" src="https://cf.shopee.co.id/file/8e38a67a548a8643abe6587499ea4c44" alt="menu" />
+            <p id="menu-name">Teh (Es/Hangat)</p>
+            <p id="menu-price">Rp.3.000</p>
+          </div>
+          <div id="menu-box">
+            <img
+              class="menu-image"
+              src="https://cdn0-production-images-kly.akamaized.net/OA9olTnUXS4aKfBuHoLE88XhhDA=/1200x1200/smart/filters:quality(75):strip_icc():format(jpeg)/kly-media-production/medias/3357357/original/061409600_1611390214-Template_Landscape_1_.jpg"
+              alt="menu"
+            />
+            <p id="menu-name">Jeruk (Es/Hangat)</p>
+            <p id="menu-price">Rp.4.000</p>
+          </div>
+
+          <div id="menu-box">
+            <img
+              class="menu-image"
+              src="https://cdn1-production-images-kly.akamaized.net/KwD5u15V85aW6h3smUG3AjZyjTc=/250x0:917x667/1200x1200/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/4105104/original/067001500_1659076056-shutterstock_520264186.jpg"
+              alt="menu"
+            />
+            <p id="menu-name">Lemon Tea (Es/Hangat)</p>
+            <p id="menu-price">Rp.4.000</p>
+          </div>
+          <div id="menu-box">
+            <img class="menu-image" src="https://img-global.cpcdn.com/recipes/fe34fe322a840789/751x532cq70/es-bunga-telang-foto-resep-utama.jpg" alt="menu" />
+            <p id="menu-name">Es Bunga Telang</p>
+            <p id="menu-price">Rp.4.000</p>
+          </div>
+
+          <div id="menu-box">
+            <img class="menu-image" src="https://ds393qgzrxwzn.cloudfront.net/resize/m500x500/cat1/img/images/0/FiqmykDvCs.jpg" alt="menu" />
+            <p id="menu-name">Es Sirup</p>
+            <p id="menu-price">Rp.3.000</p>
+          </div>
+          <div id="menu-box">
+            <img class="menu-image" src="https://img-global.cpcdn.com/steps/2b68d5a79311e563/400x400cq70/es-susu-matcha-langkah-memasak-2-foto.jpg" alt="menu" />
+            <p id="menu-name">Susu (Es/Hangat)</p>
+            <p id="menu-price">Rp.3.000</p>
+          </div>
+
+          <div id="menu-box">
+            <img class="menu-image" src="https://s2.bukalapak.com/img/22018923662/large/data.jpeg.webp" alt="menu" />
+            <p id="menu-name">Coffee Mix (Es/Hangat)</p>
+            <p id="menu-price">Rp.3.000</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer id="contact-section">
+      <h2 id="contact-title">Kontak</h2>
+      <div id="contact-list">
+        <h3>Media sosial</h3>
+        <a id="contact-box" href="https://api.whatsapp.com/send?phone=08815854473">whatsapp Business</a>
+        <a id="contact-box" href="https://web.facebook.com/sate.kedungjambal?_rdc=1&_rdr">Facebook</a>
+      </div>
+      <p id="creator">Created by <a href="github.com/mikiidis">ssomn</a></p>
+    </footer>
+  </body>
+</html>
